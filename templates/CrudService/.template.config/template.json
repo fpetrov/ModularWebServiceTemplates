@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "identity": "CrudService.Solution",
+  "name": "CrudService Clean Solution",
+  "author": "Fedor Petrov",
+  "description": "A clean CRUD API service.",
+  "tags": {
+    "language": "C#",
+    "type": "solution"
+  },
+  "preferNameDirectory": true,
+  "shortName": "crud",
+  "sourceName": "CrudService",
+  "groupIdentity": "CrudService.Templates",
+  "classifications": [ "Web", "API", "Clean", "DDD" ],
+  "symbols": {
+    "db": {
+      "type": "parameter",
+      "description": "Connection string to your PostgreSQL database.",
+      "datatype": "text",
+      "replaces": "DefaultConnectionString",
+      "defaultValue": "Server=.;Database=MyDb;"
+    },
+    "swagger": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Adds OpenAPI middleware and SwaggerUI."
+    },
+    "Framework": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "net9.0",
+      "replaces": "net9.0",
+      "description": "Target framework for the solution.",
+      "choices": [
+        { "choice": "net9.0", "description": ".NET 9 Solution." },
+        { "choice": "net8.0", "description": ".NET 8 Solution." }
+      ]
+    }
+  },
+  "exclude": [ "**/[Bb]in/**", "**/[Oo]bj/**", ".template.config/**", ".idea/**" ]
+}
