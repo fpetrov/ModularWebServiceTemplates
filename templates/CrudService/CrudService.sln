@@ -1,6 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudService.SourceGenerator", "CrudService.SourceGenerator\CrudService.SourceGenerator.csproj", "{38C7CABD-CE2F-47F9-97EC-49F54036F8D6}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudService.WebHost", "CrudService.WebHost\CrudService.WebHost.csproj", "{460E2485-36D0-4A5E-92C9-1DEB92D9CDD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudService.SourceGenerator.SharedAssets", "CrudService.SourceGenerator.SharedAssets\CrudService.SourceGenerator.SharedAssets.csproj", "{7D6F6778-CB5E-4C89-BCE7-C82F4F1B8611}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudService.Contracts", "CrudService.Contracts\CrudService.Contracts.csproj", "{493817A8-10BD-48CF-BFD1-D87EE6FC56B3}"
 EndProject
@@ -16,10 +20,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38C7CABD-CE2F-47F9-97EC-49F54036F8D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38C7CABD-CE2F-47F9-97EC-49F54036F8D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38C7CABD-CE2F-47F9-97EC-49F54036F8D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38C7CABD-CE2F-47F9-97EC-49F54036F8D6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{460E2485-36D0-4A5E-92C9-1DEB92D9CDD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{460E2485-36D0-4A5E-92C9-1DEB92D9CDD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{460E2485-36D0-4A5E-92C9-1DEB92D9CDD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{460E2485-36D0-4A5E-92C9-1DEB92D9CDD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D6F6778-CB5E-4C89-BCE7-C82F4F1B8611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D6F6778-CB5E-4C89-BCE7-C82F4F1B8611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D6F6778-CB5E-4C89-BCE7-C82F4F1B8611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D6F6778-CB5E-4C89-BCE7-C82F4F1B8611}.Release|Any CPU.Build.0 = Release|Any CPU
 		{493817A8-10BD-48CF-BFD1-D87EE6FC56B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{493817A8-10BD-48CF-BFD1-D87EE6FC56B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{493817A8-10BD-48CF-BFD1-D87EE6FC56B3}.Release|Any CPU.ActiveCfg = Release|Any CPU

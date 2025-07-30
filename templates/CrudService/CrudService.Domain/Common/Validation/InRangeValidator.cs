@@ -1,4 +1,5 @@
 using System.Numerics;
+using CrudService.Domain.Common.Exceptions;
 
 namespace CrudService.Domain.Common.Validation;
 
@@ -9,10 +10,10 @@ public static partial class Validation
     {
         if (field < min || field > max)
         {
-            throw new ArgumentException($"Field {nameof(field)} must be between {min} and {max}.");
+            throw new ValidationException($"Field {nameof(field)} must be between {min} and {max}.");
         }
     }
     
-    public static void LengthInRangeOrThrow(string field, int min, int max) 
+    public static void LengthInRangeOrThrow(string field, int min, int max)
         => InRangeOrThrow(field.Length, min, max);
 }

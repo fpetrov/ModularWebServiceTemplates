@@ -12,7 +12,11 @@
   "shortName": "crud",
   "sourceName": "CrudService",
   "groupIdentity": "CrudService.Templates",
-  "classifications": [ "Web", "API", "DDD" ],
+  "classifications": [
+    "Web",
+    "API",
+    "DDD"
+  ],
   "guids": [
     "460E2485-36D0-4A5E-92C9-1DEB92D9CDD7",
     "493817A8-10BD-48CF-BFD1-D87EE6FC56B3",
@@ -21,6 +25,19 @@
     "191B5BAE-024A-44FD-B410-35723D10A46B"
   ],
   "symbols": {
+    "name": {
+      "type": "parameter",
+      "datatype": "string"
+    },
+    "projectNameLower": {
+      "type": "generated",
+      "generator": "casing",
+      "datatype": "string",
+      "parameters": {
+        "source": "name",
+        "toLower": true
+      }
+    },
     "swagger": {
       "type": "parameter",
       "datatype": "bool",
@@ -34,10 +51,21 @@
       "replaces": "net9.0",
       "description": "Target framework for the solution.",
       "choices": [
-        { "choice": "net9.0", "description": ".NET 9 Solution." },
-        { "choice": "net8.0", "description": ".NET 8 Solution." }
+        {
+          "choice": "net9.0",
+          "description": ".NET 9 Solution."
+        },
+        {
+          "choice": "net8.0",
+          "description": ".NET 8 Solution."
+        }
       ]
     }
   },
-  "exclude": [ "**/[Bb]in/**", "**/[Oo]bj/**", ".template.config/**", ".idea/**" ]
+  "exclude": [
+    "**/[Bb]in/**",
+    "**/[Oo]bj/**",
+    ".template.config/**",
+    ".idea/**"
+  ]
 }

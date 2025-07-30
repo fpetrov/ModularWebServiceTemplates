@@ -44,7 +44,7 @@ dotnet ef database update --project src/MyAwesomeService.Infrastructure
 dotnet run --project src/MyAwesomeService.Api
 ```
 
-По умолчанию Swagger UI будет доступен по адресу http://localhost:5011/swagger.
+По умолчанию Swagger UI будет доступен по адресу http://localhost:8080/swagger.
 
 ## Параметры шаблона
 
