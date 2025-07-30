@@ -3,11 +3,37 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CrudService.Infrastructure.Repositories;
 
-public class ProductRepository(ApplicationContext db) : GenericRepository<Product>(db), IProductRepository
+public class ProductRepository(AppDbContext db) : IProductRepository
 {
-    public Task<Product> SomeCustom(int id)
+    public async Task<Product?> GetById(int id, CancellationToken ct = default)
     {
-        return Task.FromResult(
-            new Product(id, string.Empty, 0));
+        return await db.Products
+            .AsNoTracking()
+            .FirstOrDefaultAsync(p => p.Id == id, ct);
+    }
+
+    public async Task<List<Product>> GetAll(CancellationToken ct = default)
+    {
+        return await db.Products
+            .AsNoTracking()
+            .ToListAsync(ct);
+    }
+
+    public async Task Add(Product product, CancellationToken ct = default)
+    {
+        await db.Products.AddAsync(product, ct);
+        await db.SaveChangesAsync(ct);
+    }
+
+    public async Task Update(Product product)
+    {
+        db.Products.Update(product);
+        await db.SaveChangesAsync();
+    }
+
+    public async Task Delete(Product product)
+    {
+        db.Products.Remove(product);
+        await db.SaveChangesAsync();
     }
 }

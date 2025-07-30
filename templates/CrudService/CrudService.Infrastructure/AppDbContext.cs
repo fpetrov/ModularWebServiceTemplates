@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CrudService.Infrastructure;
 
-public sealed class ApplicationContext : DbContext
+public sealed class AppDbContext : DbContext
 {
-    public ApplicationContext(DbContextOptions<ApplicationContext> options)
+    public AppDbContext(DbContextOptions<AppDbContext> options)
         : base(options)
     {
         Database.EnsureCreated();
@@ -17,6 +17,6 @@ public sealed class ApplicationContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
-        modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationContext).Assembly);
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
     }
 }

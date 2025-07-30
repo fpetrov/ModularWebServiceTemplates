@@ -1,4 +1,4 @@
-﻿namespace CrudService.UnitTests;
+﻿namespace CrudService.Tests;
 
 public class UnitTest1
 {

@@ -1,9 +1,9 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "identity": "CrudService.Solution",
-  "name": "CrudService Clean Solution",
+  "name": "CrudService Solution",
   "author": "Fedor Petrov",
-  "description": "A clean CRUD API service.",
+  "description": "A CRUD API service.",
   "tags": {
     "language": "C#",
     "type": "solution"
@@ -12,15 +12,15 @@
   "shortName": "crud",
   "sourceName": "CrudService",
   "groupIdentity": "CrudService.Templates",
-  "classifications": [ "Web", "API", "Clean", "DDD" ],
+  "classifications": [ "Web", "API", "DDD" ],
+  "guids": [
+    "460E2485-36D0-4A5E-92C9-1DEB92D9CDD7",
+    "493817A8-10BD-48CF-BFD1-D87EE6FC56B3",
+    "553FF8CE-98A2-48EF-8FFC-C0426FA56E03",
+    "3FA74A53-0234-44E6-B09B-89CACED5156D",
+    "191B5BAE-024A-44FD-B410-35723D10A46B"
+  ],
   "symbols": {
-    "db": {
-      "type": "parameter",
-      "description": "Connection string to your PostgreSQL database.",
-      "datatype": "text",
-      "replaces": "DefaultConnectionString",
-      "defaultValue": "Server=.;Database=MyDb;"
-    },
     "swagger": {
       "type": "parameter",
       "datatype": "bool",

@@ -1,17 +1,15 @@
-# CrudService Clean Solution
+# CrudService Solution
 
 ![.NET](https://img.shields.io/badge/.NET-8%2F9-blueviolet?logo=dotnet&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 ## О проекте
-CrudService Clean Solution — это шаблон чистого CRUD API сервиса на ASP.NET Core, реализующий принципы **Clean Architecture** и **DDD**. Шаблон позволяет быстро стартовать новое микросервис‑приложение с минимальной настройкой.
+CrudService Solution — это шаблон простого CRUD API сервиса.
 
-## Основные возможности
-- Чистая архитектура слоёв (Domain → Application → Infrastructure → Presentation).
-- Поддержка **PostgreSQL** (подключается через строку подключения `db`).
+## Основная информация
+- Используется **PostgreSQL**.
 - Генерация OpenAPI спецификации и **Swagger UI** (*по умолчанию включено*, можно отключить параметром `--swagger false`).
-- Выбор целевой версии платформы: **.NET 9** (по умолчанию) или **.NET 8**.
-- Подключён **Entity Framework Core**.
+- Выбор целевой версии платформы: **.NET 9** (по умолчанию) или **.NET 8**.
 - Готовая интеграция с **Docker** и **docker‑compose** для локального запуска.
 
 ## Быстрый старт
@@ -21,7 +19,6 @@ CrudService Clean Solution — это шаблон чистого CRUD API се�
 ```bash
 dotnet new crud \
   -n MyAwesomeService \
-  --db "Host=localhost;Port=5432;Database=mydb;Username=postgres;Password=pass;" \
   --swagger true \
   -f net9.0
 ```
@@ -30,12 +27,12 @@ dotnet new crud \
 
 ```
 MyAwesomeService/
- ├─ src/
- │  ├─ MyAwesomeService.Domain/
- │  ├─ MyAwesomeService.Contracts/
- │  ├─ MyAwesomeService.Infrastructure/
- │  ├─ MyAwesomeService.UnitTests/
- │  └─ MyAwesomeService.Api/
+ └─ src/
+    ├─ MyAwesomeService.Domain/
+    ├─ MyAwesomeService.Contracts/
+    ├─ MyAwesomeService.Infrastructure/
+    ├─ MyAwesomeService.UnitTests/
+    └─ MyAwesomeService.WebHost/
 ```
 
 ### Запуск приложения локально
@@ -47,13 +44,12 @@ dotnet ef database update --project src/MyAwesomeService.Infrastructure
 dotnet run --project src/MyAwesomeService.Api
 ```
 
-По умолчанию Swagger UI будет доступен по адресу http://localhost:5000/swagger.
+По умолчанию Swagger UI будет доступен по адресу http://localhost:5011/swagger.
 
 ## Параметры шаблона
 
 | Параметр | Тип | Значение по умолчанию | Описание |
 |----------|-----|-----------------------|----------|
-| `--db` | text | `Server=.;Database=MyDb;` | Строка подключения к PostgreSQL. |
 | `--swagger` | bool | `true` | Подключить OpenAPI middleware и SwaggerUI. |
 | `--Framework` | choice | `net9.0` | Целевая версия .NET (`net9.0` или `net8.0`). |
 

@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudService.Api", "CrudService.Api\CrudService.Api.csproj", "{460E2485-36D0-4A5E-92C9-1DEB92D9CDD7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudService.WebHost", "CrudService.WebHost\CrudService.WebHost.csproj", "{460E2485-36D0-4A5E-92C9-1DEB92D9CDD7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudService.Contracts", "CrudService.Contracts\CrudService.Contracts.csproj", "{493817A8-10BD-48CF-BFD1-D87EE6FC56B3}"
 EndProject
@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudService.Domain", "CrudS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudService.Infrastructure", "CrudService.Infrastructure\CrudService.Infrastructure.csproj", "{3FA74A53-0234-44E6-B09B-89CACED5156D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudService.UnitTests", "CrudService.UnitTests\CrudService.UnitTests.csproj", "{191B5BAE-024A-44FD-B410-35723D10A46B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudService.Tests", "CrudService.Tests\CrudService.Tests.csproj", "{191B5BAE-024A-44FD-B410-35723D10A46B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

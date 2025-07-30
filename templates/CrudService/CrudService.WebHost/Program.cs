@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-builder.Services.AddDbContext<ApplicationContext>(options => options.UseNpgsql("Default"));
+builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql("Default"));
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
@@ -29,6 +29,5 @@ if (app.Environment.IsDevelopment())
 #endif
 
 app.MapControllers();
-app.UseHttpsRedirection();
 
 app.Run();

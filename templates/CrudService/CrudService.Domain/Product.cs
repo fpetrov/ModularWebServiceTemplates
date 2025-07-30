@@ -3,8 +3,9 @@ using JetBrains.Annotations;
 
 namespace CrudService.Domain;
 
-public class Product : Entity
+public class Product
 {
+    public int Id { get; protected set; }
     public string Name { get; private set; }
     public int Price { get; private set; }
 
@@ -25,7 +26,7 @@ public class Product : Entity
         Price = price;
     }
 
-    private static void Validate(string name, int price)
+    private void Validate(string name, int price)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(name);
         Validation.InRangeOrThrow(price, 0, 999);
@@ -34,7 +35,7 @@ public class Product : Entity
     [UsedImplicitly]
     private Product()
     {
-        Name = string.Empty;
+        Name = null!;
         Price = 0;
     }
 }
