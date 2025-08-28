@@ -13,7 +13,7 @@ public class ProductController(IProductRepository repository) : ControllerBase
     {
         var products = await repository.GetAll(ct);
         var result = products.Select(Map).ToList();
-        
+
         return Ok(result);
     }
 
@@ -21,7 +21,7 @@ public class ProductController(IProductRepository repository) : ControllerBase
     public async Task<ActionResult<ProductDto>> GetById(int id, CancellationToken ct)
     {
         var product = await repository.GetById(id, ct);
-        
+
         return product is null ? NotFound() : Ok(Map(product));
     }
 
@@ -30,7 +30,7 @@ public class ProductController(IProductRepository repository) : ControllerBase
     {
         var product = new Product(0, dto.Name, dto.Price);
         await repository.Add(product, ct);
-        
+
         return CreatedAtAction(nameof(GetById), new { id = product.Id }, Map(product));
     }
 
@@ -39,11 +39,13 @@ public class ProductController(IProductRepository repository) : ControllerBase
     {
         var product = await repository.GetById(id, ct);
         if (product is null)
+        {
             return NotFound();
+        }
 
         product.Update(dto.Name, dto.Price);
         await repository.Update(product);
-        
+
         return Ok();
     }
 
@@ -52,10 +54,12 @@ public class ProductController(IProductRepository repository) : ControllerBase
     {
         var product = await repository.GetById(id, ct);
         if (product is null)
+        {
             return NotFound();
+        }
 
         await repository.Delete(product);
-        
+
         return NoContent();
     }
 

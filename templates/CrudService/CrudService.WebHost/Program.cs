@@ -12,13 +12,13 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connect
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
-#if (swagger)
+#if swagger
 builder.Services.AddOpenApi();
 #endif
 
 var app = builder.Build();
 
-#if (swagger)
+#if swagger
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();

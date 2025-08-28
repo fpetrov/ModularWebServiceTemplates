@@ -10,7 +10,7 @@ public sealed class AppDbContext : DbContext
     {
         Database.EnsureCreated();
     }
-    
+
     public DbSet<Product> Products { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

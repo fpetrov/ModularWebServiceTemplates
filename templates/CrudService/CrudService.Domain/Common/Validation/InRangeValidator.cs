@@ -13,7 +13,7 @@ public static partial class Validation
             throw new ValidationException($"Field {nameof(field)} must be between {min} and {max}.");
         }
     }
-    
+
     public static void LengthInRangeOrThrow(string field, int min, int max)
         => InRangeOrThrow(field.Length, min, max);
 }
