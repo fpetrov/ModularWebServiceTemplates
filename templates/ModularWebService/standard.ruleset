@@ -15,7 +15,7 @@
         <Rule Id="SA1007"  Action="Warning" />          <!-- Operator keyword should be followed by space -->
         <Rule Id="SA1008"  Action="Warning" />          <!-- Opening parenthesis should be spaced correctly -->
         <Rule Id="SA1009"  Action="Warning" />          <!-- Closing parenthesis should be spaced correctly -->
-        <Rule Id="SA1010"  Action="Warning" />          <!-- Opening square brackets should be spaced correctly -->
+        <Rule Id="SA1010"  Action="None" />          <!-- Opening square brackets should be spaced correctly -->
         <Rule Id="SA1011"  Action="Warning" />          <!-- Closing square brackets should be spaced correctly -->
         <Rule Id="SA1012"  Action="Warning" />          <!-- Opening braces should be spaced correctly -->
         <Rule Id="SA1013"  Action="Warning" />          <!-- Closing braces should be spaced correctly -->
@@ -55,7 +55,7 @@
         <Rule Id="SA1115"  Action="Warning" />          <!-- Parameter should follow comma -->
         <Rule Id="SA1116"  Action="None" />             <!-- Split parameters should start on line after declaration -->
         <Rule Id="SA1117"  Action="None" />             <!-- Parameters should be on same line or separate lines -->
-        <Rule Id="SA1118"  Action="Warning" />          <!-- Parameter should not span multiple lines -->
+        <Rule Id="SA1118"  Action="None" />          <!-- Parameter should not span multiple lines -->
         <Rule Id="SA1120"  Action="Warning" />          <!-- Comments should contain text -->
         <Rule Id="SA1121"  Action="Warning" />          <!-- Use built-in type alias -->
         <Rule Id="SA1122"  Action="Warning" />          <!-- Use string.Empty for empty strings -->

@@ -1,25 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularWebService.ApiClient", "ModularWebService.ApiClient\ModularWebService.ApiClient.csproj", "{72F31EED-DD80-4028-8DB1-38B90EEF45DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularWebService.WebHost", "ModularWebService.WebHost\ModularWebService.WebHost.csproj", "{B8F196A4-D2A9-4CB0-9FF9-1593E39225BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularWebService.Tests", "ModularWebService.Tests\ModularWebService.Tests.csproj", "{E03AC09C-4F38-4359-992D-2AFAF8212836}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularWebService.Contracts", "ModularWebService.Contracts\ModularWebService.Contracts.csproj", "{5CFD07F7-9859-4AF4-BBC6-7D4E84066785}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularWebService.WebApi", "ModularWebService.WebApi\ModularWebService.WebApi.csproj", "{49C96199-3144-4A25-B951-E15C05DD0FD2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularWebService.Domain", "ModularWebService.Domain\ModularWebService.Domain.csproj", "{108911F9-5407-49C2-85B6-075E4AA1205F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{FF031C60-010D-4D0B-9DFC-588A4D5CD2F9}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Auth", "Auth", "{D392C959-1FB0-4468-8435-296AA8CAC14E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularWebService.Auth", "Modules\Auth\ModularWebService.Auth\ModularWebService.Auth.csproj", "{2D63878F-045D-4AA4-9FF7-07E240F2DF22}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularWebService.Auth.Contracts", "Modules\Auth\ModularWebService.Auth.Contracts\ModularWebService.Auth.Contracts.csproj", "{C491C2E2-07D6-4E7A-AFAD-A011ADE4B665}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularWebService.Auth.Tests", "Modules\Auth\ModularWebService.Auth.Tests\ModularWebService.Auth.Tests.csproj", "{54708C3E-C1ED-472B-821B-0C385BA1807C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularWebService.Modularity", "ModularWebService.Modularity\ModularWebService.Modularity.csproj", "{95570F18-848A-4D18-88A5-3BAAE428DC82}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularWebService.Infrastructure", "ModularWebService.Infrastructure\ModularWebService.Infrastructure.csproj", "{55A74EC7-1416-450C-9BC6-CE409D3906E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,39 +17,21 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{72F31EED-DD80-4028-8DB1-38B90EEF45DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{72F31EED-DD80-4028-8DB1-38B90EEF45DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{72F31EED-DD80-4028-8DB1-38B90EEF45DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{72F31EED-DD80-4028-8DB1-38B90EEF45DE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E03AC09C-4F38-4359-992D-2AFAF8212836}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E03AC09C-4F38-4359-992D-2AFAF8212836}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E03AC09C-4F38-4359-992D-2AFAF8212836}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E03AC09C-4F38-4359-992D-2AFAF8212836}.Release|Any CPU.Build.0 = Release|Any CPU
-		{49C96199-3144-4A25-B951-E15C05DD0FD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{49C96199-3144-4A25-B951-E15C05DD0FD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{49C96199-3144-4A25-B951-E15C05DD0FD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{49C96199-3144-4A25-B951-E15C05DD0FD2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2D63878F-045D-4AA4-9FF7-07E240F2DF22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2D63878F-045D-4AA4-9FF7-07E240F2DF22}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2D63878F-045D-4AA4-9FF7-07E240F2DF22}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2D63878F-045D-4AA4-9FF7-07E240F2DF22}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C491C2E2-07D6-4E7A-AFAD-A011ADE4B665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C491C2E2-07D6-4E7A-AFAD-A011ADE4B665}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C491C2E2-07D6-4E7A-AFAD-A011ADE4B665}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C491C2E2-07D6-4E7A-AFAD-A011ADE4B665}.Release|Any CPU.Build.0 = Release|Any CPU
-		{54708C3E-C1ED-472B-821B-0C385BA1807C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{54708C3E-C1ED-472B-821B-0C385BA1807C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{54708C3E-C1ED-472B-821B-0C385BA1807C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{54708C3E-C1ED-472B-821B-0C385BA1807C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{95570F18-848A-4D18-88A5-3BAAE428DC82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{95570F18-848A-4D18-88A5-3BAAE428DC82}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{95570F18-848A-4D18-88A5-3BAAE428DC82}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{95570F18-848A-4D18-88A5-3BAAE428DC82}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{D392C959-1FB0-4468-8435-296AA8CAC14E} = {FF031C60-010D-4D0B-9DFC-588A4D5CD2F9}
-		{2D63878F-045D-4AA4-9FF7-07E240F2DF22} = {D392C959-1FB0-4468-8435-296AA8CAC14E}
-		{C491C2E2-07D6-4E7A-AFAD-A011ADE4B665} = {D392C959-1FB0-4468-8435-296AA8CAC14E}
-		{54708C3E-C1ED-472B-821B-0C385BA1807C} = {D392C959-1FB0-4468-8435-296AA8CAC14E}
+		{B8F196A4-D2A9-4CB0-9FF9-1593E39225BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8F196A4-D2A9-4CB0-9FF9-1593E39225BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8F196A4-D2A9-4CB0-9FF9-1593E39225BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8F196A4-D2A9-4CB0-9FF9-1593E39225BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CFD07F7-9859-4AF4-BBC6-7D4E84066785}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CFD07F7-9859-4AF4-BBC6-7D4E84066785}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CFD07F7-9859-4AF4-BBC6-7D4E84066785}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CFD07F7-9859-4AF4-BBC6-7D4E84066785}.Release|Any CPU.Build.0 = Release|Any CPU
+		{108911F9-5407-49C2-85B6-075E4AA1205F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{108911F9-5407-49C2-85B6-075E4AA1205F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{108911F9-5407-49C2-85B6-075E4AA1205F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{108911F9-5407-49C2-85B6-075E4AA1205F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55A74EC7-1416-450C-9BC6-CE409D3906E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55A74EC7-1416-450C-9BC6-CE409D3906E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55A74EC7-1416-450C-9BC6-CE409D3906E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55A74EC7-1416-450C-9BC6-CE409D3906E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
