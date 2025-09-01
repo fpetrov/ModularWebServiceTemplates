@@ -1,0 +1,13 @@
+namespace WebServiceModule.Domain;
+
+public class ModuleItem
+{
+    public ModuleItem(int id, string name)
+    {
+        Id = id;
+        Name = name;
+    }
+
+    public int Id { get; set; }
+    public string Name { get; set; }
+}
