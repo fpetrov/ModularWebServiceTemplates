@@ -2,4 +2,4 @@ using MediatR;
 
 namespace WebServiceModule.Contracts;
 
-public record GetModuleItemsRequest() : IRequest<List<ModuleItemDto>>;
+public record GetModuleItemsRequest : IRequest<List<ModuleItemDto>>;
